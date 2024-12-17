@@ -1,0 +1,420 @@
+/* Importing Google Fonts - Outfit */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+/*=============== Root Variables ===============*/
+:root {
+  --header-height: 8rem; /* Header height */
+
+  /*========== Colors ==========*/
+  --color-white: #ffffff; /* White color */
+  --color-dark: #181818; /* Dark color */
+  --color-primary: #4b5945; /* Primary theme color */
+  --color-primary-light: #b2c9ad; /* Lighter shade of primary color */
+  --color-secondary: #fecd0c;
+
+  /*========== Font and typography ==========*/
+  --body-font: "Outfit", sans-serif; /* Default font family */
+
+  /* Font sizes */
+  --normal-font-size: 1.6rem;
+
+  /*========== Font weights ==========*/
+  --font-regular: 400; /* Normal weight */
+  --font-medium: 500; /* Medium weight */
+  --font-semi-bold: 600; /* Semi-bold weight */
+
+  /*========== z-index values ==========*/
+  --z-tooltip: 10; /* For tooltips */
+  --z-fixed: 100; /* Fixed elements like header */
+}
+
+/*=============== BASE STYLES ===============*/
+/* Reset default styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: var(--color-secondary);
+  color: var(--color-dark);
+}
+
+/* Smooth scrolling and root font size setup */
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+/* Body defaults */
+body {
+  font-family: var(--body-font);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Remove text underline and add hover transition */
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+/* Container for content alignment */
+.container {
+  max-width: 117rem;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 1.6rem;
+}
+
+/* Flex utility class */
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+/* Grid utility class */
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.section {
+  padding: 10rem 0;
+}
+
+/* Button styles */
+.btn {
+  font-size: var(--normal-font-size);
+  padding: 1.5rem 3rem;
+  border-radius: 5rem;
+  font-weight: var(--font-regular);
+  transition: 0.3s;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  display: inline-block;
+  border: 2px solid transparent;
+}
+
+.btn-container {
+  display: inline-block;
+  padding-top: 3.5rem;
+}
+
+/* Normal button */
+.btn-normal {
+  color: var(--color-dark);
+  background-color: var(--color-white);
+}
+
+.btn-normal:hover {
+  background-color: transparent;
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+}
+
+/* Primary Light button */
+.btn-primary-light {
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  font-weight: var(--font-medium);
+}
+
+.btn-primary-light:hover {
+  background-color: transparent;
+  color: var(--color-primary-light);
+  border: 2px solid var(--color-primary-light);
+}
+
+/* Primary button */
+.btn-primary {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  font-weight: var(--font-medium);
+  display: inline-block;
+  z-index: 10;
+  position: relative;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-icon {
+  position: absolute;
+  background-color: var(--color-primary-light);
+  display: inline-block;
+  padding: 1.5rem;
+  border-radius: 5rem;
+  margin-left: -1.5rem;
+  z-index: 999;
+  transition: 0.3s;
+  border: 2px solid var(--color-primary-light);
+}
+.btn-container:hover .btn-icon {
+  margin-left: 0.5rem;
+  background-color: transparent;
+}
+
+.btn-icon i {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+}
+
+/* Margin utility classes */
+.mt-1 {
+  margin-top: 1rem;
+}
+.mt-2 {
+  margin-top: 2rem;
+}
+.mt-3 {
+  margin-top: 3rem;
+}
+.mt-4 {
+  margin-top: 4rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.mb-2 {
+  margin-bottom: 2rem;
+}
+.mb-3 {
+  margin-bottom: 3rem;
+}
+.mb-4 {
+  margin-bottom: 4rem;
+}
+
+.color-black {
+  color: var(--color-dark);
+}
+
+.color-white {
+  color: var(--color-white);
+}
+/* Big header style */
+.big-header {
+  font-size: 6.4rem;
+  font-weight: var(--font-semi-bold);
+  color: var(--color-white);
+}
+
+.medium-header {
+  font-size: 3.2rem;
+  font-weight: var(--font-semi-bold);
+}
+
+/* Description text style */
+.description-text {
+  font-size: 1.6rem;
+  line-height: 3rem;
+  margin: 1.5rem 0;
+}
+
+/*=============== HEADER & NAVIGATION ===============*/
+/* Header setup */
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: transparent;
+  z-index: var(--z-fixed);
+  transition: 0.3s;
+}
+.scroll-header {
+  background-color: var(--color-primary);
+}
+/* Navigation container */
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-height);
+}
+
+/* Logo styles */
+.nav__logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav__logo--img {
+  height: 3rem; /* Logo image height */
+}
+
+.nav__logo--text {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  color: var(--color-white);
+  margin-left: 1rem;
+}
+
+/* Navigation links */
+.nav__list {
+  display: flex;
+  gap: 5rem; /* Space between menu items */
+}
+
+.nav__item {
+  position: relative;
+}
+
+.nav__item::before {
+  position: absolute;
+  content: "";
+  bottom: 0px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-white);
+  transition: 0.3s;
+}
+
+.nav__item:hover::before,
+.nav__item--active::before {
+  width: 100%;
+}
+
+.nav__item--active {
+  pointer-events: none;
+}
+
+.nav__link {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-regular);
+  color: var(--color-white);
+}
+
+.nav__link i {
+  display: none; /* Hide icons by default */
+}
+
+/*=============== HERO SECTION ===============*/
+/* Hero section container */
+.hero {
+  background: var(--color-primary);
+  height: 72vh;
+  object-fit: cover;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+}
+
+/* Hero decorative elements */
+.hero::before {
+  position: absolute;
+  content: "Hello";
+  top: -1.9rem;
+  left: -6rem;
+  width: 27rem;
+  height: 27rem;
+  background-color: var(--color-primary-light);
+  filter: blur(288.5px);
+  border-radius: 50%;
+}
+
+.hero::after {
+  position: absolute;
+  content: "";
+  bottom: -2%;
+  right: -10%;
+  background-color: var(--color-primary-light);
+  width: 39.7rem;
+  height: 39.7rem;
+  border-radius: 50%;
+  filter: blur(421.5px);
+}
+
+/* Hero content alignment */
+.hero__container {
+  grid-template-columns: repeat(2, max-content);
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Hero left content (images) */
+.hero__left--content {
+  width: 51rem;
+}
+
+.hero__images {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero__images img {
+  width: 16.4rem;
+  height: 40rem;
+  border-radius: 110px; /* Rounded edges */
+  border: 2px solid var(--color-primary-light);
+}
+
+/* Hero right content (text and buttons) */
+.hero__right--content {
+  width: 56rem;
+}
+
+.hero__short--data {
+  margin-top: 3rem;
+}
+
+/*=============== About Us Section ===============*/
+
+.about__container {
+  grid-template-columns: repeat(2, max-content);
+  column-gap: 3rem;
+  align-items: center;
+}
+
+.about__left {
+  max-width: 56.4rem;
+}
+
+.about__right {
+  background: url("../img/frame.png") center center/cover no-repeat;
+  padding: 3rem 0 3rem 5rem;
+}
+
+.counter-section {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.counter {
+  font-size: 2.4rem;
+  font-weight: var(--font-medium);
+}
+
+.counter-text {
+  font-size: 1.6rem;
+  opacity: 0.8;
+}

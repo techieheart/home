@@ -1,0 +1,59 @@
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media only screen and (max-width: 340px) {
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+}
+
+@media screen and (max-width: 767px) {
+}
+/* For large devices */
+@media screen and (max-width: 1023px) {
+  /*=============== HEADER & NAV ===============*/
+  .nav__menu {
+    background-color: var(--color-white);
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    border-radius: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.116) 0px 7px 29px 0px;
+  }
+
+  .nav__menu .nav__list {
+    justify-content: space-between;
+    padding: 1.5rem 3rem;
+  }
+
+  .nav__menu .nav__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-dark);
+    transition: 0.3s;
+  }
+  .nav__menu .nav__link:hover {
+    color: var(--color-primary);
+  }
+  .nav__menu .nav__link i {
+    display: initial;
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1054px) {
+}
+
+@media screen and (min-width: 1124px) {
+}
+
+/* For 2K resolutions (2048 x 1152, 2048 x 1536) */
+@media screen and (min-width: 2048px) {
+}
+
+/* For 4K resolutions (3840 x 2160, 4096 x 2160) */
+@media screen and (min-width: 3840px) {
+}
