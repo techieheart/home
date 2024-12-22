@@ -13,7 +13,7 @@
 
     <!-- =============== Remix Icon =============== -->
     <!-- Link to Remix Icon library for icon usage -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <!-- =============== CSS Files =============== -->
     <!-- Links to external CSS files for styling -->
@@ -92,12 +92,12 @@
             <div class="hero__container container grid">
                 <!-- Left Content - Images Section -->
                 <div class="hero__left--content">
-                    <div class="hero__images">
+                    <figure class="hero__images">
                         <!-- Hero Images -->
                         <img src="img/hero_image-1.png" alt="">
                         <img src="img/hero_image-2.png" alt="">
                         <img src="img/hero_image-3.png" alt="">
-                    </div>
+                    </figure>
 
                     <!-- Circular Button with Arrow Icon -->
                     <a href="#" class="circle-button btn.hover-filled-slide-right">
@@ -108,11 +108,11 @@
                 <!-- Right Content - Heading and Description -->
                 <div class="hero__right--content">
                     <!-- Main Heading -->
-                    <h1 class="big-header">
+                    <h1 class="font-xl color-white">
                         Transform Your Living Space
                     </h1>
                     <!-- Description Paragraph -->
-                    <p class="description-text color-white">
+                    <p class="text-description color-white">
                         Discover how elegant, functional, and personalized interiors can redefine your lifestyle. Our
                         design solutions blend
                         creativity with modern trends to craft spaces that inspire and feel like home. Let us turn your
@@ -141,7 +141,7 @@
                             About Us
                         </span>
 
-                        <h2 class="medium-header">
+                        <h2 class="font-md">
                             We craft spaces that reflect your lifestyle, adapting seamlessly to every season.
                         </h2>
 
@@ -169,16 +169,50 @@
                     </div>
                 </div>
                 <div class="about__right">
-                    <div class="about__img">
+                    <figure class="about__img">
                         <img src="img/about.png" alt="">
-                    </div>
+                    </figure>
                 </div>
             </div>
         </section>
 
         <!-- =============== Discover Section =============== -->
-        <section class="discover section">
+        <section class="discover__section section">
+            <div class="discover__container container grid">
+                <div class="discover__left">
+                    <h2 class="font-lg color-white">
+                        Discover Our Vision
+                    </h2>
+                </div>
 
+                <div class="discover__right color-white">
+                    <p class="text-description">
+                        Interior design blends artistry with precision, creating harmonious spaces that balance
+                        aesthetics and functionality.
+                        Designers continuously explore emerging trends, materials, and technologies to craft tailored
+                        environments that resonate
+                        with their clients'
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section class="video__section">
+            <div class="video__container container grid">
+                <div class="video__thumbnail">
+                    <img src="img/image.png" alt="Video Thumbnail" class="thumbnail-img">
+                    <div class="play-button">
+                        <span>&#9654;</span> <!-- Play icon -->
+                    </div>
+                </div>
+                <div class="video__popup">
+                    <iframe width="1170" height="550"
+                        src="https://www.youtube.com/embed/k2maqlyUuVw?si=BEnR7MDcn1f_aDt4" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
         </section>
 
     </main>
@@ -191,6 +225,25 @@
 
     <script src="js/jquery.min.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        // Select the play button and add an event listener to it
+        document.querySelector('.play-button').addEventListener('click', function () {
+            // Select the video container and thumbnail
+            const videoContainer = document.querySelector('.video__container');
+            const videoThumbnail = document.querySelector('.video__thumbnail');
+            const videoPopup = document.querySelector('.video__popup');
+
+            // Add the 'active' class to the video container to show the video
+            videoContainer.classList.add('active');
+
+            // Hide the thumbnail image by setting display to none
+            videoThumbnail.style.display = 'none';
+
+            // Show the video by making the popup visible
+            videoPopup.style.display = 'block';
+        });
+    </script>
 </body>
 
 </html>
