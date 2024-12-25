@@ -39,3 +39,20 @@ function animateCounter(selector, duration = 2000) {
 
 // Call the animateCounter function on elements with the "counter" class
 animateCounter(".counter", 2000);
+
+// Select the play button and add an event listener to it
+document.querySelector(".play-button").addEventListener("click", function () {
+  // Select the video container and thumbnail
+  const videoContainer = document.querySelector(".video__container");
+  const videoThumbnail = document.querySelector(".video__thumbnail");
+  const videoPopup = document.querySelector(".video__popup");
+
+  // Add the 'active' class to the video container to show the video
+  videoContainer.classList.add("active");
+
+  // Hide the thumbnail image by setting display to none
+  videoThumbnail.style.display = "none";
+
+  // Show the video by making the popup visible
+  videoPopup.style.display = "block";
+});

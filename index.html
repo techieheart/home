@@ -88,11 +88,11 @@
     <main class="main">
         <!-- =============== Hero Section =============== -->
         <!-- Introduction section with a headline, images, and description -->
-        <section class="hero section">
-            <div class="hero__container container grid">
+        <section class="content__section section content__section--gradient-1">
+            <div class="content__container container grid mt-8">
                 <!-- Left Content - Images Section -->
-                <div class="hero__left--content">
-                    <figure class="hero__images">
+                <div class="content__left--content">
+                    <figure class="content__images">
                         <!-- Hero Images -->
                         <img src="img/hero_image-1.png" alt="">
                         <img src="img/hero_image-2.png" alt="">
@@ -106,7 +106,7 @@
                 </div>
 
                 <!-- Right Content - Heading and Description -->
-                <div class="hero__right--content">
+                <div class="content__right--content">
                     <!-- Main Heading -->
                     <h1 class="font-xl color-white">
                         Transform Your Living Space
@@ -120,8 +120,8 @@
                         masterpiece.
                     </p>
 
-                    <!-- Call-to-Action Button and Placeholder for Testimonials -->
-                    <div class="hero__short--data">
+
+                    <div class="content__short--data">
                         <!-- Button to Explore More -->
                         <a href="#" class="btn btn-primary-light">Explore Now</a>
                         <div class="hero__testimonial">
@@ -132,10 +132,10 @@
             </div>
         </section>
 
-        <!-- =============== About Section =============== -->
-        <section class="about section">
-            <div class="about__container container grid">
-                <div class="about__left">
+        <!-- =============== Content Section =============== -->
+        <section class="content__section section">
+            <div class="content__container container grid">
+                <div class="content__left">
                     <div class="about__data">
                         <span class="description-text">
                             About Us
@@ -168,7 +168,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="about__right">
+                <div class="content__right bg__stroke--square">
                     <figure class="about__img">
                         <img src="img/about.png" alt="">
                     </figure>
@@ -176,16 +176,16 @@
             </div>
         </section>
 
-        <!-- =============== Discover Section =============== -->
-        <section class="discover__section section">
-            <div class="discover__container container grid">
-                <div class="discover__left">
+        <!-- =============== Content Section =============== -->
+        <section class="content__section content__section--gradient-2 section" id="discover">
+            <div class="content__container container grid">
+                <div class="content__left">
                     <h2 class="font-lg color-white">
                         Discover Our Vision
                     </h2>
                 </div>
 
-                <div class="discover__right color-white">
+                <div class="content__right color-white">
                     <p class="text-description">
                         Interior design blends artistry with precision, creating harmonious spaces that balance
                         aesthetics and functionality.
@@ -215,6 +215,13 @@
             </div>
         </section>
 
+        <div class="content__section section">
+            <div class="content__container container grid">
+                <div class="content__left"></div>
+                <div class="content__right"></div>
+            </div>
+        </div>
+
     </main>
 
     <!-- =============== Footer Section =============== -->
@@ -227,22 +234,7 @@
     <script src="js/main.js"></script>
 
     <script>
-        // Select the play button and add an event listener to it
-        document.querySelector('.play-button').addEventListener('click', function () {
-            // Select the video container and thumbnail
-            const videoContainer = document.querySelector('.video__container');
-            const videoThumbnail = document.querySelector('.video__thumbnail');
-            const videoPopup = document.querySelector('.video__popup');
 
-            // Add the 'active' class to the video container to show the video
-            videoContainer.classList.add('active');
-
-            // Hide the thumbnail image by setting display to none
-            videoThumbnail.style.display = 'none';
-
-            // Show the video by making the popup visible
-            videoPopup.style.display = 'block';
-        });
     </script>
 </body>
 
