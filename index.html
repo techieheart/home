@@ -1,212 +1,292 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- HTML5 Document Declaration -->
+
+<html lang="en"> <!-- Language attribute set to English -->
 
 <head>
-    <!-- =============== Meta Information =============== -->
-    <!-- Character encoding and viewport for responsiveness -->
-    <meta charset="UTF-8">
+    <!-- Meta Tags for Document Settings -->
+    <meta charset="UTF-8"> <!-- Character encoding set to UTF-8 for universal text support -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures responsive design on all devices -->
 
-    <!-- =============== Favicon =============== -->
-    <!-- Adds a favicon (small logo) in the browser tab -->
+    <!-- Favicon for the website -->
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <!-- Defines the favicon displayed in the browser tab -->
 
-    <!-- =============== Remix Icon =============== -->
-    <!-- Link to Remix Icon library for icon usage -->
+    <!-- External CSS Libraries -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Remix Icons library for scalable vector icons -->
 
-    <!-- =============== CSS Files =============== -->
-    <!-- Links to external CSS files for styling -->
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Swiper CSS for responsive sliders and carousels -->
 
-    <!-- =============== Page Title =============== -->
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="css/responsive.css"> <!-- Responsive design for mobile and tablet devices -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Main stylesheet for overall design and styling -->
+
+    <!-- Page Title -->
     <title>Homen - Modern HTML Template for Creative Websites</title>
+    <!-- Title shown in browser tab and search engine results -->
 </head>
 
+
 <body>
+
     <!-- =============== Header Section =============== -->
-    <!-- Contains the site navigation bar -->
+    <!-- Main navigation and branding section of the website -->
     <header class="header" id="header">
         <nav class="nav__container container">
 
-            <!-- Logo Section -->
+            <!-- =============== Logo and Branding =============== -->
+            <!-- Links back to the homepage and displays the logo -->
             <a href="index.html" class="nav__logo">
-                <img src="img/logo.png" alt="Logo Image" class="nav__logo--img">
-                <span class="nav__logo--text">Homen</span>
+                <img src="img/logo.png" alt="Logo Image" class="nav__logo--img"> <!-- Logo Image -->
+                <span class="nav__logo--text">Homen</span> <!-- Logo Text -->
             </a>
 
-            <!-- Navigation Menu -->
+            <!-- =============== Navigation Menu =============== -->
+            <!-- Navigation links for the main pages of the website -->
             <div class="nav__menu">
                 <ul class="nav__list">
-                    <!-- Navigation Item - Home -->
+                    <!-- Home Page Link (Active) -->
                     <li class="nav__item nav__item--active">
                         <a href="#" class="nav__link">
-                            <i class="ri-home-4-line"></i>
+                            <i class="ri-home-4-line"></i> <!-- Icon for home page -->
                             Home
                         </a>
                     </li>
-                    <!-- Navigation Item - About -->
+
+                    <!-- About Page Link -->
                     <li class="nav__item">
                         <a href="#" class="nav__link">
-                            <i class="ri-group-line"></i>
+                            <i class="ri-group-line"></i> <!-- Icon for about page -->
                             About
                         </a>
                     </li>
-                    <!-- Navigation Item - Blog -->
+
+                    <!-- Blog Page Link -->
                     <li class="nav__item">
                         <a href="#" class="nav__link">
-                            <i class="ri-news-line"></i>
+                            <i class="ri-news-line"></i> <!-- Icon for blog page -->
                             Blog
                         </a>
                     </li>
-                    <!-- Navigation Item - Services -->
+
+                    <!-- Services Page Link -->
                     <li class="nav__item">
                         <a href="#" class="nav__link">
-                            <i class="ri-service-line"></i>
+                            <i class="ri-service-line"></i> <!-- Icon for services page -->
                             Services
                         </a>
                     </li>
-                    <!-- Navigation Item - Project -->
+
+                    <!-- Project Page Link -->
                     <li class="nav__item">
                         <a href="#" class="nav__link">
-                            <i class="ri-projector-line"></i>
+                            <i class="ri-projector-line"></i> <!-- Icon for project page -->
                             Project
                         </a>
                     </li>
                 </ul>
             </div>
 
-            <!-- Right Content - Contact Button -->
+            <!-- =============== Contact Us h3 =============== -->
+            <!-- h3 linking to the contact page for easy access -->
             <div class="nav__right--content">
                 <a href="#" class="btn btn-normal">Contact Us <span></span></a>
             </div>
         </nav>
     </header>
 
-    <!-- =============== Main Content =============== -->
+
     <main class="main">
-        <!-- =============== Hero Section =============== -->
-        <!-- Introduction section with a headline, images, and description -->
-        <section class="content__section section content__section--gradient-1">
-            <div class="content__container container grid mt-8">
-                <!-- Left Content - Images Section -->
-                <div class="content__left--content">
-                    <figure class="content__images">
-                        <!-- Hero Images -->
+        <!-- Main content section -->
+
+        <!-- Hero Section with Background Image -->
+        <section class="section bg-1">
+            <!-- Section with a background image for a visually impactful introduction -->
+
+            <div class="container grid grid-container ">
+                <!-- Grid container for layout with padding top -->
+
+                <!-- Left Section: Images and Button -->
+                <div class="grid-item-left mt-8">
+                    <!-- Left-side content area with images and button -->
+
+                    <figure class="image-wrapper">
+                        <!-- Wrapper for images -->
+
                         <img src="img/hero_image-1.png" alt="">
+                        <!-- Image 1 -->
+
                         <img src="img/hero_image-2.png" alt="">
+                        <!-- Image 2 -->
+
                         <img src="img/hero_image-3.png" alt="">
+                        <!-- Image 3 -->
                     </figure>
 
-                    <!-- Circular Button with Arrow Icon -->
-                    <a href="#" class="circle-button btn.hover-filled-slide-right">
-                        <!-- <i class="ri-arrow-right-up-line"></i> -->
+                    <a href="#" class="circle-h3 btn">
+                        <!-- Circular button or interaction area (e.g., could be for more information or action) -->
                     </a>
                 </div>
 
-                <!-- Right Content - Heading and Description -->
-                <div class="content__right--content">
-                    <!-- Main Heading -->
-                    <h1 class="font-xl color-white">
+                <!-- Left Section: Text Content -->
+                <div class="grid-item-right mt-8 text-white">
+                    <!-- Left-side text content with white text color -->
+
+                    <h1>
                         Transform Your Living Space
                     </h1>
-                    <!-- Description Paragraph -->
-                    <p class="text-description color-white">
-                        Discover how elegant, functional, and personalized interiors can redefine your lifestyle. Our
-                        design solutions blend
-                        creativity with modern trends to craft spaces that inspire and feel like home. Let us turn your
-                        vision into a
-                        masterpiece.
-                    </p>
+                    <!-- Main heading that captures attention -->
 
+                    <p>
+                        Discover how elegant, functional, and personalized interiors can redefine your lifestyle. Our
+                        design
+                        solutions blend creativity with modern trends to craft spaces that inspire and feel like home.
+                        Let us
+                        turn your vision into a masterpiece.
+                    </p>
+                    <!-- Descriptive paragraph explaining the value and mission -->
 
                     <div class="content__short--data">
-                        <!-- Button to Explore More -->
+                        <!-- Short data section with a call to action -->
+
                         <a href="#" class="btn btn-primary-light">Explore Now</a>
+                        <!-- Explore Now button encouraging users to take action -->
+
                         <div class="hero__testimonial">
-                            <!-- Placeholder for Testimonials -->
+                            <!-- Placeholder for testimonials (could be dynamic content or reviews) -->
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- =============== Content Section =============== -->
-        <section class="content__section section">
-            <div class="content__container container grid">
-                <div class="content__left">
-                    <div class="about__data">
-                        <span class="description-text">
+        <!-- About Us Section -->
+        <section class="section">
+            <!-- Section dedicated to providing information about the company -->
+
+            <div class="container grid grid-container">
+                <!-- Grid layout container -->
+
+                <!-- Left Section: About Us Content -->
+                <div class="grid-item-left">
+                    <div class="data">
+                        <!-- Data container -->
+
+                        <p>
                             About Us
-                        </span>
+                        </p>
+                        <!-- Section title -->
 
-                        <h2 class="font-md">
+                        <h3>
                             We craft spaces that reflect your lifestyle, adapting seamlessly to every season.
-                        </h2>
+                        </h3>
+                        <!-- Subheading that highlights the mission of the company -->
 
+                        <!-- Counter Section: Statistics Display -->
                         <div class="counter-section">
+                            <!-- Displaying relevant company statistics -->
+
                             <div class="counter-item">
                                 <span class="counter">500</span>
+                                <!-- Number of exports -->
+
                                 <p class="counter-text">Our Export</p>
+                                <!-- Description of the export stat -->
                             </div>
+
                             <div class="counter-item">
                                 <span class="counter">700</span>
+                                <!-- Number of completed projects -->
+
                                 <p class="counter-text">Project Done</p>
+                                <!-- Description of completed projects stat -->
                             </div>
+
                             <div class="counter-item">
                                 <span class="counter">4.9</span>
+                                <!-- Rating score -->
+
                                 <p class="counter-text">Out of 5.00</p>
+                                <!-- Rating description -->
                             </div>
                         </div>
 
-                        <a href="#" class="btn-container">
-                            <span class="btn btn-primary">Learn More</span>
-                            <span class="btn-icon">
-                                <i class="ri-arrow-right-up-line"></i>
+                        <!-- Learn More Button -->
+                        <a href="#" class="btn-wrapper">
+                            <span class="btn-container">
+                                <span class="btn btn-primary">Learn More</span>
+                                <span class="btn-icon">
+                                    <i class="ri-arrow-right-up-line"></i>
+                                </span>
                             </span>
                         </a>
                     </div>
                 </div>
-                <div class="content__right bg__stroke--square">
-                    <figure class="about__img">
-                        <img src="img/about.png" alt="">
+
+                <!-- Right Section: About Us Image -->
+                <div class="grid-item-right stroke-1">
+                    <!-- Image that represents the company -->
+                    <figure class="content__img">
+                        <img src="img/about.png" alt="About Us Image">
+                        <!-- Displaying the company image -->
                     </figure>
                 </div>
             </div>
         </section>
 
-        <!-- =============== Content Section =============== -->
-        <section class="content__section content__section--gradient-2 section" id="discover">
-            <div class="content__container container grid">
-                <div class="content__left">
-                    <h2 class="font-lg color-white">
+
+        <!-- Discover Our Vision Section -->
+        <section class="bg-2 section" id="discover">
+            <!-- Section with a background and a purpose to discover the vision -->
+
+            <div class="container grid grid-container text-white pb-15">
+                <!-- Grid container with white text color and bottom padding -->
+
+                <!-- Left Section: Vision Heading -->
+                <div class="grid-item-left">
+                    <h2>
                         Discover Our Vision
                     </h2>
+                    <!-- Heading for discovering the vision of the company -->
                 </div>
 
-                <div class="content__right color-white">
-                    <p class="text-description">
+                <!-- Right Section: Vision Description -->
+                <div class="grid-item-right">
+                    <p>
                         Interior design blends artistry with precision, creating harmonious spaces that balance
-                        aesthetics and functionality.
-                        Designers continuously explore emerging trends, materials, and technologies to craft tailored
-                        environments that resonate
-                        with their clients'
+                        aesthetics and functionality. Designers continuously explore emerging trends, materials, and
+                        technologies to craft tailored environments that resonate with their clients'.
                     </p>
+                    <!-- A brief description of the vision and approach to interior design -->
                 </div>
             </div>
         </section>
 
         <!-- Video Section -->
         <section class="video__section">
+            <!-- Video section container -->
+
             <div class="video__container container grid">
+                <!-- Video container with grid layout -->
+
+                <!-- Video Thumbnail Section -->
                 <div class="video__thumbnail">
+                    <!-- Video thumbnail image -->
                     <img src="img/image.png" alt="Video Thumbnail" class="thumbnail-img">
+                    <!-- Thumbnail image -->
+
+                    <!-- Play Button Overlay -->
                     <div class="play-button">
-                        <span>&#9654;</span> <!-- Play icon -->
+                        <!-- Play button for video, represented by a triangle symbol (►) -->
+                        <span>&#9654;</span>
                     </div>
                 </div>
+
+                <!-- Video Popup Section -->
                 <div class="video__popup">
+                    <!-- Popup container for video iframe -->
                     <iframe width="1170" height="550"
                         src="https://www.youtube.com/embed/k2maqlyUuVw?si=BEnR7MDcn1f_aDt4" frameborder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
@@ -215,14 +295,423 @@
             </div>
         </section>
 
-        <div class="content__section section">
-            <div class="content__container container grid">
-                <div class="content__left"></div>
-                <div class="content__right"></div>
+
+        <!-- Services Section -->
+        <section class="section bg-3 mt-8" id="services">
+            <!-- Services section with background -->
+
+            <div class="container grid grid-container">
+                <!-- Left Section: Image -->
+                <div class="grid-item-left stroke-2">
+                    <!-- Image for services -->
+                    <figure class="content__img">
+                        <img src="img/image1.png" alt="Service Image">
+                    </figure>
+                </div>
+
+                <!-- Right Section: Text Content -->
+                <div class="grid-item-right pl-5 text-white">
+                    <!-- Data Container: Heading and Subheading -->
+                    <div class="data">
+                        <!-- Subheading -->
+                        <p>Our Services</p>
+                        <!-- Main Heading -->
+                        <h2>Delivering Bespoke Interior Design Solutions</h2>
+                    </div>
+
+                    <!-- FAQ Container: Services Breakdown -->
+                    <div class="faq-container mt-5">
+                        <!-- FAQ Item 1: Residential Design -->
+                        <div class="faq-item">
+                            <h3 class="faq-question">
+                                Residential Design
+                                <!-- Icon to expand/collapse FAQ -->
+                                <span class="faq-icon"><i class="ri-add-line"></i></span>
+                            </h3>
+                            <div class="faq-answer">
+                                Transform your home into a serene sanctuary with our Residential Design services. We
+                                create
+                                personalized, functional, and timeless spaces that reflect your style and elevate
+                                everyday
+                                living.
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 2: Space Planning -->
+                        <div class="faq-item">
+                            <h3 class="faq-question">
+                                Space Planning
+                                <!-- Icon to expand/collapse FAQ -->
+                                <span class="faq-icon"><i class="ri-add-line"></i></span>
+                            </h3>
+                            <div class="faq-answer">
+                                Transform your home into a serene sanctuary with our Space Planning services. We design
+                                layouts
+                                that maximize space and functionality, ensuring every area is used efficiently and
+                                effectively.
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 3: Commercial Design -->
+                        <div class="faq-item">
+                            <h3 class="faq-question">
+                                Commercial Design
+                                <!-- Icon to expand/collapse FAQ -->
+                                <span class="faq-icon"><i class="ri-add-line"></i></span>
+                            </h3>
+                            <div class="faq-answer">
+                                Our Commercial Design services create impactful environments for businesses. We combine
+                                style
+                                and functionality to create spaces that inspire employees and impress clients.
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+
+        <!-- Product Section -->
+        <section class="section">
+            <div class="container">
+                <!-- Swiper Container for Product Slider -->
+                <div class="swiper product-slider">
+
+                    <!-- Grid Layout for Portfolio Header -->
+                    <div class="grid grid-container">
+                        <!-- Left Section: Portfolio Title and Subtitle -->
+                        <div class="grid-item-left">
+                            <!-- Portfolio heading and description -->
+                            <p>Our Portfolio</p>
+                            <h2>Cozy Up Every Corner of Your Home</h2>
+                        </div>
+
+                        <!-- Right Section: Slider Navigation Buttons -->
+                        <div class="grid-item-right mt-5 product">
+                            <!-- Navigation Buttons (Next and Previous) -->
+                            <div class="swiper-button-next">
+                                <i class="ri-arrow-right-s-line"></i> <!-- Next button icon -->
+                            </div>
+                            <div class="swiper-button-prev">
+                                <i class="ri-arrow-left-s-line"></i> <!-- Previous button icon -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Slider Items -->
+                    <div class="swiper-wrapper mt-5">
+
+                        <!-- Product Item 1 -->
+                        <div class="product-item swiper-slide">
+                            <!-- Product Image -->
+                            <figure class="product-img mb-1">
+                                <img src="img/product1.png" alt="Study Room">
+                                <!-- Learn More Button -->
+                                <a href="#" class="product-btn btn">
+                                    Learn More
+                                    <span class="product__btn--icon">
+                                        <i class="ri-arrow-right-up-line"></i> <!-- Icon for button -->
+                                    </span>
+                                </a>
+                            </figure>
+                            <!-- Product Title and Description -->
+                            <h3>Study Room</h3>
+                            <p>A quiet space designed for focus and productivity, tailored to inspire learning.</p>
+                        </div>
+
+                        <!-- Product Item 2 -->
+                        <div class="product-item swiper-slide">
+                            <!-- Product Image -->
+                            <figure class="product-img mb-1">
+                                <img src="img/product2.png" alt="Kid's Room">
+                                <!-- Learn More Button -->
+                                <a href="#" class="product-btn btn">
+                                    Learn More
+                                    <span class="product__btn--icon">
+                                        <i class="ri-arrow-right-up-line"></i> <!-- Icon for button -->
+                                    </span>
+                                </a>
+                            </figure>
+                            <!-- Product Title and Description -->
+                            <h3>Kid's Room</h3>
+                            <p>A fun, safe, and functional room where creativity and comfort come together.</p>
+                        </div>
+
+                        <!-- Product Item 3 -->
+                        <div class="product-item swiper-slide">
+                            <!-- Product Image -->
+                            <figure class="product-img mb-1">
+                                <img src="img/product3.png" alt="Home Office">
+                                <!-- Learn More Button -->
+                                <a href="#" class="product-btn btn">
+                                    Learn More
+                                    <span class="product__btn--icon">
+                                        <i class="ri-arrow-right-up-line"></i> <!-- Icon for button -->
+                                    </span>
+                                </a>
+                            </figure>
+                            <!-- Product Title and Description -->
+                            <h3>Home Office</h3>
+                            <p>A practical, comfortable workspace that enhances productivity and focus.</p>
+                        </div>
+
+                        <!-- Product Item 4 (Repeat structure from Item 1) -->
+                        <div class="product-item swiper-slide">
+                            <figure class="product-img mb-1">
+                                <img src="img/product1.png" alt="Study Room">
+                                <a href="#" class="product-btn btn">
+                                    Learn More
+                                    <span class="product__btn--icon">
+                                        <i class="ri-arrow-right-up-line"></i> <!-- Icon for button -->
+                                    </span>
+                                </a>
+                            </figure>
+                            <h3>Study Room</h3>
+                            <p>A quiet space designed for focus and productivity, tailored to inspire learning.</p>
+                        </div>
+
+                        <!-- Product Item 5 (Repeat structure from Item 2) -->
+                        <div class="product-item swiper-slide">
+                            <figure class="product-img mb-1">
+                                <img src="img/product2.png" alt="Kid's Room">
+                                <a href="#" class="product-btn btn">
+                                    Learn More
+                                    <span class="product__btn--icon">
+                                        <i class="ri-arrow-right-up-line"></i> <!-- Icon for button -->
+                                    </span>
+                                </a>
+                            </figure>
+                            <h3>Kid's Room</h3>
+                            <p>A fun, safe, and functional room where creativity and comfort come together.</p>
+                        </div>
+
+                        <!-- Product Item 6 (Repeat structure from Item 3) -->
+                        <div class="product-item swiper-slide">
+                            <figure class="product-img mb-1">
+                                <img src="img/product3.png" alt="Home Office">
+                                <a href="#" class="product-btn btn">
+                                    Learn More
+                                    <span class="product__btn--icon">
+                                        <i class="ri-arrow-right-up-line"></i> <!-- Icon for button -->
+                                    </span>
+                                </a>
+                            </figure>
+                            <h3>Home Office</h3>
+                            <p>A practical, comfortable workspace that enhances productivity and focus.</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Call-to-Action Button -->
+                    <a href="#" class="btn-wrapper mb-2 d-flex justify-center">
+                        <span class="btn-container">
+                            <!-- Main Button -->
+                            <span class="btn btn-primary">Learn More</span>
+                            <!-- Button Icon -->
+                            <span class="btn-icon">
+                                <i class="ri-arrow-right-up-line"></i> <!-- Icon for the button -->
+                            </span>
+                        </span>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Testimonial Section -->
+        <section class="section bg-4">
+            <div class="container text-white">
+                <!-- Testimonial Header -->
+                <div class="grid text-center">
+                    <!-- Section title and description -->
+                    <p>Testimonial</p>
+                    <h2>What Our Customer Says</h2>
+                </div>
+
+                <!-- Testimonial Slider -->
+                <div class="grid grid-container mt-8 swiper testimonial">
+                    <!-- Swiper Wrapper: This wraps the testimonial items -->
+                    <div class="swiper-wrapper">
+
+                        <!-- Testimonial Item 1 -->
+                        <div class="swiper-slide testimonial-item">
+                            <!-- Grid Layout for Testimonial Content -->
+                            <div class="grid grid-container">
+                                <div class="grid-item-left stroke-2">
+                                    <!-- Image of the customer providing the testimonial -->
+                                    <figure class="testimonial-img">
+                                        <img src="img/testimonial-1.png" alt="Customer Image">
+                                    </figure>
+                                </div>
+                                <div class="grid-item-right">
+                                    <!-- Customer rating (5 stars) -->
+                                    <div class="testimonial-reviews">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </div>
+                                    <!-- Testimonial text -->
+                                    <p class="text-gray">
+                                        InToner Design transformed our brand with their exceptional creativity and
+                                        attention to
+                                        detail. Their designs perfectly captured our vision, elevating our business
+                                        presence and
+                                        helping us stand out in a competitive market. Their professionalism, prompt
+                                        communication, and passion for design made the entire process seamless. Highly
+                                        recommended!
+                                    </p>
+                                    <!-- Customer name and position -->
+                                    <h4>John Smith</h4>
+                                    <p>Co-Founders of Success</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial Item 2 (Same structure as Item 1) -->
+                        <div class="swiper-slide testimonial-item">
+                            <div class="grid grid-container">
+                                <div class="grid-item-left stroke-2">
+                                    <figure class="testimonial-img">
+                                        <img src="img/testimonial-1.png" alt="Customer Image">
+                                    </figure>
+                                </div>
+                                <div class="grid-item-right">
+                                    <div class="testimonial-reviews">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </div>
+                                    <p class="text-gray">
+                                        InToner Design transformed our brand with their exceptional creativity and
+                                        attention to
+                                        detail. Their designs perfectly captured our vision, elevating our business
+                                        presence and
+                                        helping us stand out in a competitive market. Their professionalism, prompt
+                                        communication, and passion for design made the entire process seamless. Highly
+                                        recommended!
+                                    </p>
+                                    <h4>John Smith</h4>
+                                    <p>Co-Founders of Success</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial Item 3 (Same structure as Item 1) -->
+                        <div class="swiper-slide testimonial-item">
+                            <div class="grid grid-container">
+                                <div class="grid-item-left stroke-2">
+                                    <figure class="testimonial-img">
+                                        <img src="img/testimonial-1.png" alt="Customer Image">
+                                    </figure>
+                                </div>
+                                <div class="grid-item-right">
+                                    <div class="testimonial-reviews">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </div>
+                                    <p class="text-gray">
+                                        InToner Design transformed our brand with their exceptional creativity and
+                                        attention to
+                                        detail. Their designs perfectly captured our vision, elevating our business
+                                        presence and
+                                        helping us stand out in a competitive market. Their professionalism, prompt
+                                        communication, and passion for design made the entire process seamless. Highly
+                                        recommended!
+                                    </p>
+                                    <h4>John Smith</h4>
+                                    <p>Co-Founders of Success</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Navigation buttons for the Swiper (Next and Previous buttons) -->
+                    <div class="testimonial-slider">
+                        <div class="swiper-button-next">
+                            <i class="ri-arrow-right-s-line"></i> <!-- Next button icon -->
+                        </div>
+                        <div class="swiper-button-prev">
+                            <i class="ri-arrow-left-s-line"></i> <!-- Previous button icon -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact-section">
+            <!-- Main section for the contact form -->
+            <div class="grid grid-container container">
+                <!-- Container for the grid layout -->
+
+                <div class="grid-item-left">
+                    <!-- Left side of the grid (contains the form and text) -->
+
+                    <h2>Looking Forward to Partnering With Us?</h2>
+                    <!-- Heading that invites users to reach out for collaboration -->
+
+                    <p>Let's work together and we help by our best interior design</p>
+                    <!-- Subheading or description offering the service -->
+
+                    <!-- Contact form for submitting inquiries -->
+                    <form class="form mt-3" action="submit_form.php" method="POST">
+                        <div class="form-row d-flex">
+                            <!-- Form row that contains both the Name and Email fields -->
+
+                            <div class="form-group">
+                                <!-- Form group for the Name input -->
+                                <label for="name">Name</label><br>
+                                <input type="text" id="name" name="name" placeholder="Your Name Here" required><br><br>
+                                <!-- Name input field -->
+                            </div>
+
+                            <div class="form-group">
+                                <!-- Form group for the Email input -->
+                                <label for="email">Email</label><br>
+                                <input type="email" id="email" name="email" placeholder="Email Address Here"
+                                    required><br><br>
+                                <!-- Email input field -->
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <!-- Form group for the Message textarea -->
+                            <label for="message">Message</label><br>
+                            <textarea id="message" name="message" placeholder="Your Message Here" rows="4" cols="50"
+                                required></textarea><br><br>
+                            <!-- Message textarea where users can write their inquiry -->
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <!-- Submit button to send the form -->
+                    </form>
+
+                </div>
+
+                <div class="grid-item-right">
+                    <!-- Right side of the grid (contains an image related to contact) -->
+
+                    <figure class="contact stroke-3">
+                        <!-- Image figure wrapping the contact image -->
+                        <img src="img/contact-form.png" alt="">
+                        <!-- Contact form related image -->
+                    </figure>
+                </div>
+            </div>
+        </section>
+
 
     </main>
+
 
     <!-- =============== Footer Section =============== -->
     <!-- Placeholder for future footer content -->
@@ -230,12 +719,10 @@
 
     </footer>
 
+    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/main.js"></script>
 
-    <script>
-
-    </script>
 </body>
 
 </html>

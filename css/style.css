@@ -1,6 +1,8 @@
 /* Importing Google Fonts - Outfit */
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
+@import url(utility.css);
+
 /*=============== Root Variables ===============*/
 :root {
   --header-height: 8rem; /* Header height */
@@ -9,8 +11,11 @@
   --color-white: #ffffff; /* White color */
   --color-dark: #181818; /* Dark color */
   --color-primary: #4b5945; /* Primary theme color */
+  --color-primary-50: #4b594550;
   --color-primary-light: #b2c9ad; /* Lighter shade of primary color */
+  --color-light-transparent: #d7e5be50;
   --color-secondary: #fecd0c;
+  --color-gray: #ffffff80;
 
   /*========== Font and typography ==========*/
   --body-font: "Outfit", sans-serif; /* Default font family */
@@ -68,6 +73,10 @@ ol {
   list-style: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 /* Responsive images */
 img {
   max-width: 100%;
@@ -84,10 +93,9 @@ img {
   padding: 0 1.6rem;
 }
 
-.content__container {
+.grid-container {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  padding-bottom: 15rem;
 }
 
 /* Flex utility class */
@@ -110,6 +118,10 @@ img {
 }
 
 /* Button styles */
+/* span.btn-wrapper, span.btn, span.btn-icon{
+  line-height: initial;
+} */
+
 .btn {
   font-size: var(--normal-font-size);
   padding: 1.5rem 3rem;
@@ -161,7 +173,7 @@ img {
   background-color: var(--color-primary);
   font-weight: var(--font-medium);
   display: inline-block;
-  z-index: 10;
+  z-index: var(--z-tooltip);
   position: relative;
 }
 
@@ -173,9 +185,12 @@ img {
 
 .btn-icon {
   position: absolute;
+  content: "";
+  width: 6rem;
+  height: 6rem;
+  text-align: center;
   background-color: var(--color-primary-light);
   display: inline-block;
-  padding: 1.5rem;
   border-radius: 5rem;
   margin-left: -1.5rem;
   z-index: var(--z-tooltip);
@@ -189,109 +204,59 @@ img {
 }
 
 .btn-icon i {
+  display: inline-block;
   font-size: 2.5rem;
   color: var(--color-primary);
-}
-
-/* Margin utility classes */
-.mt-1 {
-  margin-top: 1rem;
-}
-.mt-2 {
-  margin-top: 2rem;
-}
-.mt-3 {
-  margin-top: 3rem;
-}
-.mt-4 {
-  margin-top: 4rem;
-}
-
-.mt-8 {
-  margin-top: 8rem;
-}
-
-.mb-1 {
-  margin-bottom: 1rem;
-}
-.mb-2 {
-  margin-bottom: 2rem;
-}
-.mb-3 {
-  margin-bottom: 3rem;
-}
-.mb-4 {
-  margin-bottom: 4rem;
-}
-
-/* Padding utility classes */
-.pt-1 {
-  padding-top: 1rem;
-}
-.pt-2 {
-  padding-top: 2rem;
-}
-.pt-3 {
-  padding-top: 3rem;
-}
-.pt-4 {
-  padding-top: 4rem;
-}
-
-.pb-1 {
-  padding-bottom: 1rem;
-}
-.pb-2 {
-  padding-bottom: 2rem;
-}
-.pb-3 {
-  padding-bottom: 3rem;
-}
-.pb-4 {
-  padding-bottom: 4rem;
-}
-
-.color-black {
-  color: var(--color-dark);
-}
-
-.color-white {
-  color: var(--color-white);
+  margin-top: 1.2rem;
 }
 
 /* Big header style */
-.font-xl {
+h1 {
   font-size: 6.4rem;
   font-weight: var(--font-semi-bold);
 }
 
-.font-lg {
+h2 {
   font-size: 4.8rem;
   font-weight: var(--font-semi-bold);
 }
 
-.font-md {
+h3 {
   font-size: 3.2rem;
   font-weight: var(--font-semi-bold);
 }
 
-/* Description text style */
-.text-description {
+h4 {
+  font-size: 2.2rem;
+  font-weight: var(--font-semi-bold);
+}
+
+/* Body text style */
+p {
   font-size: 1.6rem;
   line-height: 3rem;
   margin: 1.5rem 0;
 }
 
-/*=============== Gradient Background Classes ===============*/
+/*=============== BG Stroke Classes ===============*/
 
-.bg__stroke--square {
+.stroke-1 {
   background: url("../img/frame.png") center center/cover no-repeat;
   padding: 3rem 0 3rem 5rem;
 }
 
+.stroke-2 {
+  background: url("../img/stroke-2.png") center center/cover no-repeat;
+  padding: 5rem 0 2rem 5rem;
+}
+
+.stroke-3 {
+  background: url("../img/storke-3.png") right center/contain no-repeat;
+}
+
 /*=============== Gradient Background Classes ===============*/
 
-.content__section--gradient-1 {
+.bg-1 {
   background: var(--color-primary);
   min-height: 72rem;
   object-fit: cover;
@@ -300,7 +265,7 @@ img {
 }
 
 /* Hero decorative elements */
-.content__section--gradient-1::before {
+.bg-1::before {
   position: absolute;
   content: "";
   top: -1.9rem;
@@ -313,7 +278,7 @@ img {
   opacity: 0.4;
 }
 
-.content__section--gradient-1::after {
+.bg-1::after {
   position: absolute;
   content: "";
   bottom: -2%;
@@ -325,14 +290,14 @@ img {
   filter: blur(170.5px);
 }
 
-.content__section--gradient-2 {
+.bg-2 {
   background: var(--color-primary);
   object-fit: cover;
   position: relative;
   overflow: hidden;
 }
 
-.content__section--gradient-2::before {
+.bg-2::before {
   position: absolute;
   content: "";
   bottom: 0;
@@ -341,7 +306,30 @@ img {
   background-color: var(--color-primary-light);
   filter: blur(60.5px);
   border-radius: 50%;
-  opacity: 0.4;
+}
+
+.bg-3 {
+  overflow: hidden;
+  position: relative;
+  background: var(--color-primary);
+}
+
+.bg-3::before {
+  position: absolute;
+  content: "";
+  top: -5rem;
+  left: -10rem;
+  width: 39rem;
+  height: 39rem;
+  background-color: var(--color-primary-light);
+  border-radius: 50%;
+  filter: blur(250.5px);
+}
+
+.bg-4 {
+  overflow: hidden;
+  position: relative;
+  background: var(--color-primary);
 }
 
 /*=============== HEADER & NAVIGATION ===============*/
@@ -425,12 +413,12 @@ img {
 
 /*=============== HERO SECTION ===============*/
 
-.content__images {
+.image-wrapper {
   display: flex;
   gap: 1rem;
 }
 
-.content__images img {
+.image-wrapper img {
   width: 16.4rem;
   height: 40rem;
   border-radius: 110px; /* Rounded edges */
@@ -479,13 +467,20 @@ img {
   font-size: 50px;
   color: var(--color-white);
   background: rgba(0, 0, 0, 0.5);
-  padding: 1.3rem 2.5rem;
   border-radius: 50px;
   cursor: pointer;
+  width: 7rem;
+  height: 7rem;
+}
+
+.play-button span {
+  font-size: 3.5rem;
+  margin-left: 2.5rem;
 }
 
 .video__popup {
   display: none;
+  transition: 0.3s ease;
   z-index: var(--z-tooltip);
 }
 
@@ -495,4 +490,296 @@ img {
 
 .video__container.active .video-thumbnail {
   display: none;
+}
+
+/* Services Section */
+
+#services .grid {
+  grid-template-columns: 45% 55%;
+}
+
+/* Style for the FAQ question container */
+
+.faq-item {
+  border-top: 1px solid var(--color-primary-light);
+}
+.faq-item:last-child {
+  border-bottom: 1px solid var(--color-primary-light);
+}
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  text-align: left;
+  background-color: transparent;
+  color: var(--color-white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Style for the FAQ icon */
+.faq-icon {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  border-radius: 5rem;
+  font-size: 2rem;
+  transition: transform 3s ease;
+}
+
+/* FAQ answers transition and icon styling */
+.faq-answer {
+  max-height: 0;
+  padding-bottom: 0;
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  transition: max-height 0.5s ease, padding-bottom 0.5s ease;
+}
+
+/* FAQ item expanded: rotate icon for minus symbol */
+.faq-answer.open {
+  max-height: 1000px;
+  padding-bottom: 10rem;
+}
+.faq-answer.open + .faq-question .faq-icon i {
+  transform: rotate(45deg);
+}
+
+/* FAQ item collapsed: Reset icon to plus */
+.faq-answer + .faq-question .faq-icon i {
+  transform: rotate(0deg);
+}
+
+/* Hover effect for FAQ question */
+.faq-question:hover .faq-icon {
+  opacity: 0.8;
+}
+
+/* Hover effect for FAQ question itself */
+.faq-question:hover {
+  opacity: 0.8;
+}
+
+/* Products Design */
+
+/* Button and Product Image Styling */
+.product-img {
+  position: relative;
+}
+
+.product-btn {
+  position: absolute;
+  bottom: 2rem;
+  left: 3rem;
+  font-size: 1.6rem;
+  background-color: var(--color-primary-50);
+  padding: 1.5rem 4.5rem;
+  color: var(--color-white);
+  border-radius: 5rem;
+  border: 1px solid var(--color-white);
+  display: inline-flex;
+  align-items: center;
+}
+
+.product-btn:hover {
+  background-color: var(--color-primary);
+}
+
+.product-btn span {
+  line-height: initial;
+  margin: initial;
+}
+
+.product__btn--icon {
+  position: absolute;
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  height: 3rem;
+  width: 3rem;
+  right: 1rem;
+  border-radius: 5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Product Slider Button */
+.product {
+  position: relative;
+}
+
+.product .swiper-button-prev::after,
+.product .swiper-button-next::after {
+  content: "";
+}
+.product .swiper-button-next,
+.product .swiper-button-prev {
+  position: absolute;
+  font-size: 2rem;
+  top: initial;
+  bottom: initial;
+  width: initial;
+  height: initial;
+  color: var(--title-color);
+}
+
+.product .swiper-button-prev {
+  left: 45rem;
+}
+
+.product [class^="swiper-button-"] i {
+  font-size: 3rem;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: 50px;
+  width: 3.5rem;
+  height: 3.5rem;
+  text-align: center;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.product [class^="swiper-button-"] i:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/*=============== Testimonial Section ===============*/
+.testimonial-item .grid-container {
+  grid-template-columns: 40% 60%;
+}
+
+.testimonial-item .testimonial-img {
+  background-color: var(--color-light-transparent);
+  padding: 6rem;
+  border-radius: 2rem;
+}
+
+.testimonial-item .testimonial-img img {
+  margin: 0 auto;
+}
+
+.testimonial-item .grid-item-right {
+  padding-left: 5rem;
+}
+
+.testimonial-reviews i {
+  color: var(--color-secondary);
+  font-size: 2rem;
+}
+
+.testimonial-slider {
+  display: flex;
+}
+
+.testimonial-slider .swiper-button-prev::after,
+.testimonial-slider .swiper-button-next::after {
+  content: "";
+}
+.testimonial-slider .swiper-button-next,
+.testimonial-slider .swiper-button-prev {
+  position: absolute;
+  font-size: 2rem;
+  top: 40rem;
+  bottom: initial;
+  width: initial;
+  height: initial;
+  color: var(--title-color);
+}
+
+.testimonial-slider .swiper-button-prev {
+  left: calc(40% + 6rem);
+}
+
+.testimonial-slider .swiper-button-next {
+  right: calc(40% + 6rem);
+}
+
+.testimonial-slider [class^="swiper-button-"] i {
+  font-size: 3rem;
+  color: var(--color-primary-light);
+  border: 1px solid var(--color-primary-light);
+  border-radius: 50px;
+  width: 3.5rem;
+  height: 3.5rem;
+  text-align: center;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.testimonial-slider [class^="swiper-button-"] i:hover {
+  background-color: var(--color-primary-light);
+  color: var(--color-white);
+}
+
+/* Contact Section Style */
+.contact-section .grid {
+  gap: 10rem;
+}
+
+.contact-section .grid-container {
+  grid-template-columns: 1fr 0.9fr;
+}
+
+.contact {
+  display: flex;
+  justify-content: end;
+  padding: 5rem 0 5rem 5rem;
+}
+
+.contact img {
+  width: 100%;
+}
+
+.form .form-row {
+  gap: 2rem;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-group label {
+  font-size: 1.6rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+  height: 5rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  font-size: 1.6rem;
+  border: 1px solid #ddd;
+  padding: 1rem 1.3rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  transition: border 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  font-size: 1.6rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border: 1px solid var(--color-primary-light);
+}
+
+.form .btn {
+  width: 100%;
 }
