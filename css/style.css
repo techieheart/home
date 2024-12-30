@@ -910,9 +910,7 @@ p {
 
 .footer-item ul li a:hover {
   transform: translateX(0.5rem);
-  color: var(
-    --color-primary
-  ); /* Added hover color change for better visibility */
+  color: var(--color-white);
 }
 
 /* Email input styling */
