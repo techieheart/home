@@ -107,20 +107,38 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Swiper Slider
-
 const product = new Swiper(".product-slider", {
-  loop: true, // Optional: for continuous loop
+  loop: true, // Continuous loop
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next", // Next button
+    prevEl: ".swiper-button-prev", // Prev button
   },
   autoplay: {
-    delay: 3000,
+    delay: 5000,
     disableOnInteraction: false,
+    pauseOnMouseEnter: true,
   },
-  slidesPerView: 3, // Adjust as needed
-  spaceBetween: 10, // Adjust as needed
-  centeredSlides: true,
+  slidesPerView: 3, // Default: 3 slides visible
+  spaceBetween: 20, // Default space between slides
+  centeredSlides: true, // Center slides in the viewport
+  breakpoints: {
+    576: {
+      slidesPerView: 1, // 1 slide on small screens
+      spaceBetween: 10, // Space between slides on small screens
+    },
+    768: {
+      slidesPerView: 2, // 2 slides on medium screens
+      spaceBetween: 15, // Adjust space between slides on medium screens
+    },
+    1024: {
+      slidesPerView: 3, // 3 slides on larger screens
+      spaceBetween: 20, // Space between slides on larger screens
+    },
+    0: {
+      slidesPerView: 1, // Set 1 slide per view on very small screens
+      spaceBetween: 10, // Space between slides
+    },
+  },
 });
 
 var testimonial = new Swiper(".testimonial", {
@@ -130,8 +148,10 @@ var testimonial = new Swiper(".testimonial", {
     prevEl: ".swiper-button-prev",
   },
   autoplay: {
-    delay: 3000,
+    delay: 5000,
     disableOnInteraction: false,
   },
   centeredSlides: true,
 });
+
+AOS.init();

@@ -2,15 +2,153 @@
 /* For small devices */
 @media only screen and (max-width: 340px) {
 }
+/* Small Screen Responsive Styles - Max Width: 576px */
+@media screen and (max-width: 576px) {
+  /* Margin Top Adjustment */
+  .mt-8 {
+    margin-top: 3rem;
+  }
 
-/* For medium devices */
-@media screen and (min-width: 576px) {
+  /* Center the image wrapper */
+  .image-wrapper {
+    justify-content: center;
+  }
+
+  /* Content Layout - Center alignment for columns */
+  .content-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  /* Section 1 - Center align right section text */
+  .section:nth-child(1) .right-section {
+    text-align: center;
+  }
+
+  /* Counter Section - Full Width with padding */
+  .counter-section {
+    width: 100% !important;
+    padding: 0 2rem;
+  }
+
+  /* Data Section - Center align text */
+  .data {
+    text-align: center;
+  }
+
+  /* Section 2 - Reverse column order */
+  .section:nth-child(2) .content-layout {
+    flex-direction: column-reverse;
+  }
+
+  /* Section 3 - Center align paragraph text */
+  .section:nth-child(3) p {
+    text-align: center;
+  }
+
+  /* Section 5 - Remove left padding */
+  .section:nth-child(5) .pl-5 {
+    padding-left: 0;
+  }
+
+  /* Section 6 - Center align content */
+  .section:nth-child(6) {
+    text-align: center;
+  }
+
+  /* Section 6 - Adjust right section positioning */
+  .section:nth-child(6) .right-section {
+    position: absolute;
+    content: "";
+    bottom: 6rem;
+    margin-left: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  /* Product Section - Adjust swiper button positions */
+  .product .swiper-button-prev {
+    left: -5.5rem !important;
+  }
+  .product .swiper-button-next {
+    left: 2rem !important;
+  }
+
+  /* Product Button - Adjust padding */
+  .product-btn.btn {
+    padding: 1.5rem 4.5rem;
+  }
+
+  /* Section 6 - Add padding to button wrapper */
+  .section:nth-child(6) .btn-wrapper {
+    padding-top: 2rem;
+  }
+
+  /* Testimonial Section - Center align right section */
+  .testimonial-item .right-section {
+    text-align: center;
+    padding-bottom: 3rem;
+  }
+
+  /* Testimonial Slider - Adjust navigation button positions */
+  .testimonial-slider .swiper-button-next,
+  .testimonial-slider .swiper-button-prev {
+    top: initial;
+    bottom: 0;
+    margin-top: 3rem;
+  }
+
+  /* Testimonial Slider - Position next button */
+  .testimonial-slider .swiper-button-next {
+    right: calc(20% + 6rem);
+  }
+
+  /* Testimonial Slider - Position prev button */
+  .testimonial-slider .swiper-button-prev {
+    left: calc(20% + 6rem);
+  }
+
+  /* Contact Section - Reverse column layout */
+  .contact-section .content-layout {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  /* Contact Section - Add padding */
+  .contact {
+    padding: 4rem;
+  }
+
+  /* Footer Top - Flexible layout with gaps */
+  .footer-top .content-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  /* Footer Columns - Responsive Layout */
+
+  /* First Column - Full Width */
+  .footer-item:first-child {
+    flex: 0 0 100%;
+  }
+
+  /* Second and Third Columns - Half Width */
+  .footer-item:nth-child(2),
+  .footer-item:nth-child(3) {
+    flex: 1 1 45%;
+    width: 100%;
+  }
+
+  /* Last Column - Full Width */
+  .footer-item:last-child {
+    flex: 0 0 100%;
+  }
 }
 
-@media screen and (max-width: 767px) {
-}
-/* For large devices */
-@media screen and (max-width: 1023px) {
+/* Mediam Screen Responsive Styles - Max Width: 576px */
+@media screen and (max-width: 768px) {
   /*=============== HEADER & NAV ===============*/
   .nav__menu {
     background-color: var(--color-white);
@@ -44,16 +182,89 @@
   }
 }
 
-@media screen and (min-width: 1054px) {
-}
+/* For large devices */
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+  }
+  h2 {
+    font-size: clamp(1rem, 5vw, 2.5rem);
+    font-weight: var(--font-semi-bold);
+  }
 
-@media screen and (min-width: 1124px) {
+  h3 {
+    font-size: clamp(0.8rem, 4vw, 1.8rem);
+    font-weight: var(--font-semi-bold);
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    max-width: clamp(70rem, 90vw, 80rem);
+  }
+  .bg-1 {
+    min-height: clamp(45rem, 50vh, 50rem);
+  }
+  .image-wrapper img {
+    width: clamp(6.5rem, 20vw, 8rem);
+    height: clamp(20rem, 45vw, 23rem);
+  }
+
+  .btn {
+    padding: clamp(0.5rem, 2vw, 1rem) clamp(2rem, 4vw, 3rem);
+  }
+
+  .counter-section {
+    width: 80%;
+  }
+
+  .btn-icon {
+    width: clamp(3.5rem, 8vw, 4.5rem);
+    height: clamp(3.5rem, 8vw, 4.5rem);
+  }
+
+  .faq-answer.open {
+    padding-bottom: 12rem;
+  }
+  .product .swiper-button-prev {
+    left: 25rem;
+  }
+
+  .testimonial-item .right-section {
+    padding-left: 0;
+  }
+
+  .testimonial-item .content-layout {
+    grid-template-columns: 40% 60%;
+    gap: 1rem;
+  }
+  .testimonial-item .testimonial-img {
+    padding: 2rem;
+  }
+  .content-layout-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .contact-section .content-layout {
+    grid-template-columns: 55% 45%;
+  }
+
+  footer .container.grid.content-layout {
+    grid-template-columns: 40% 60%;
+  }
 }
 
 /* For 2K resolutions (2048 x 1152, 2048 x 1536) */
 @media screen and (min-width: 2048px) {
+  body {
+    zoom: 1.3;
+  }
 }
 
 /* For 4K resolutions (3840 x 2160, 4096 x 2160) */
 @media screen and (min-width: 3840px) {
+  body {
+    zoom: 2.3;
+  }
 }
